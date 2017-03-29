@@ -1,20 +1,20 @@
 docker-salt-master
 =============
 
-Salt-master docker container.
+Salt-master docker container with pygit2 installed.
 
 
 Build
 -----
 
-To create the image `bbinet/salt-master`, execute the following command in the
+To create the image `mmontg1/salt-master`, execute the following command in the
 `docker-salt-master` folder:
 
-    docker build -t bbinet/salt-master .
+    docker build -t mmontg1/salt-master .
 
 You can now push the new image to the public registry:
-    
-    docker push bbinet/salt-master
+
+    docker push mmontg1/salt-master
 
 
 Run
@@ -55,7 +55,7 @@ You may also configure the `salt-master` fileserver to be located in another
 
 For example:
 
-    $ docker pull bbinet/salt-master
+    $ docker pull mmontg1/salt-master
 
     $ docker run --name salt-master \
         -v /home/salt-master/config:/config \
@@ -63,4 +63,4 @@ For example:
         -p 4505:4505 \
         -p 4506:4506 \
         -p 443:443 \
-        bbinet/salt-master
+        mmontg1/salt-master
